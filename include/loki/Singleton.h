@@ -372,6 +372,7 @@ namespace Loki
         { throw std::logic_error("Dead Reference Detected"); }
     };
 
+#define ATEXIT_FIXED
     ////////////////////////////////////////////////////////////////////////////////
     ///  \struct  PhoenixSingleton
     ///
