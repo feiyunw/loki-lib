@@ -28,6 +28,12 @@
 
 
 #include <loki/SmartPtr.h>
+
+// set LOKI_CLASS_LEVEL_THREADING as default
+#if !defined(LOKI_OBJECT_LEVEL_THREADING) && !defined(LOKI_CLASS_LEVEL_THREADING)
+#define LOKI_CLASS_LEVEL_THREADING
+#endif
+
 #if defined (LOKI_OBJECT_LEVEL_THREADING) || defined (LOKI_CLASS_LEVEL_THREADING)
     #include <loki/Threads.h>
 #endif

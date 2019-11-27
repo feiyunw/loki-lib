@@ -64,6 +64,11 @@
 
 #include <cassert>
 
+// set LOKI_CLASS_LEVEL_THREADING as default
+#if !defined(LOKI_OBJECT_LEVEL_THREADING) && !defined(LOKI_CLASS_LEVEL_THREADING)
+#define LOKI_CLASS_LEVEL_THREADING
+#endif
+
 #if defined( LOKI_CLASS_LEVEL_THREADING ) || defined( LOKI_OBJECT_LEVEL_THREADING )
 
     #define LOKI_DEFAULT_THREADING_NO_OBJ_LEVEL ::Loki::ClassLevelLockable
